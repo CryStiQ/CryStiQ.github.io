@@ -1,0 +1,40 @@
+.btn-twitch { 
+	background-color: #611BBD;  
+	border-color: #50169c;
+}
+.btn-twitch:hover { 
+	background-color: #50169c;  
+}
+.btn-discord {
+	background-color: #7289DA;
+	border-color: #4a67cf;
+} 
+.btn-discord:hover {
+	 background-color: #4a67cf;
+}
+.btn-steam {
+	background-color: #000000;
+	border-color: #000000;
+}
+.btn-steam:hover {
+	background-color: #000000;
+}
+.btn-minecraft {
+	background-color: #5E9D34;
+	border-color: #50862d;
+}
+.btn-minecraft:hover {
+	background-color: #50862d;
+}
+
+.badge-minecraft {
+	background-color: #2e4d19;
+}
+
+.badge-discord {
+	background-color: #1b2b65;
+}
+.divs {
+	margin-top: 5%;
+	margin-left: 2%;
+}
