@@ -1,47 +1,81 @@
-<!-- CryStiQ.github.io -->
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The amazing site of CryStiQ</title>
+	<!-- CryStiQ.github.io -->
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>The amazing site of CryStiQ</title>
+
+		<!-- Bootstrap 4 locally -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>
+
+		<!-- FontAwesome from the official CDN -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		
+		<!-- Custom Code Wooo! -->
+		<script type="text/javascript" src="js/custom/Discord.js"></script>
+		<script type="text/javascript" src="js/custom/Minecraft.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+	</style>
+
 </head>
 <body>
-  <!-- NavBar! -->
-  <div class="jumbotron">
-    <h1 class="display-4 white">CryStiQ</h1>
-    <p class="lead">Welcome to crystiq.me!</p>
-  </div>
-  <div class="divs">
-  	<h2>CryStiQ on social media:</h2>
-    <a href="https://discordapp.com/invite/VMWjD4V">
-    	<button type="button" class="btn btn-primary"><i class="fab fa-discord"></i> Discord</button>
-	</a>
-	<a href="https://twitch.tv/Crystiq">
-    	<button type="button" class="btn btn-primary"><i class="fab fa-twitch"></i> 
-Twitch</button>
-    </a>
-  </div>
-  <div class="divs">
-  	<h2>CryStiQ sites/servers:</h2>
-    <a href="http://mc.crystiq.me">
-    	<button type="button" class="btn btn-success"><i class="fa fa-cube" aria-hidden="true"></i> Minecraft</button>
-	</a>
-  </div>
-<!--
--->
-</body>
-<footer>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-  <style type="text/css">
-  	.divs{
-  		margin-top: 5%;
-  		margin-left: 2%;
-  	}
-  </style>
+	<!-- NavBar! -->
+	<div class="jumbotron">
+		<h1 class="display-4 white">CryStiQ</h1>
+		<p class="lead">Welcome to crystiq.me!</p>
+	</div>
+	<div class="divs">
+		<h2>CryStiQ on social media:</h2>
+		<a href="https://discordapp.com/invite/VMWjD4V">
+			<button type="button" class="btn btn-primary btn-discord"><i class="fab fa-discord"></i> Discord <span class="badge badge-secondary badge-discord" id="discord-users"></span></button>
+		</a>
+		<a href="https://twitch.tv/Crystiq">
+			<button type="button" class="btn btn-primary btn-twitch"><i class="fab fa-twitch"></i> 
+			Twitch</button>
+		</a>
+		<a href="https://steamcommunity.com/id/CryStiQ/">
+			<button type="button" class="btn btn-primary btn-steam"><i class="fab fa-steam"></i> 
+			Steam</button>
+		</a>
+	</div>
+	<div class="divs">
+		<h2>CryStiQ sites/servers:</h2>
+
+		<!-- Trigger the modal with a button -->
+		<button type="button" class="btn btn-primary btn-minecraft" data-toggle="modal" data-target="#minecraftModal"><i class="fas fa-cube"></i>
+			Minecraft Vanilla <span class="badge badge-secondary badge-minecraft" id="vanilla-players"></span>
+		</button>
+
+
+
+		<!-- Modal -->
+		<div class="modal fade" id="minecraftModal" tabindex="-1" role="dialog" aria-labelledby="minecraftModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="minecraftModalLabel">CryStiQ.me Minecraft Servers</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>Cryatiq.me hosts multiple minecraft servers, spanning across diferent game styles and modes (Ok... 3, but still!)</p>
+						<p>All the servers are meant for private use, and have been setup to accomodate this requirement.</p>
+						<p>For more information on this subject contact CryStiQ from one of the means listed above.</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Ok, got it!</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<footer>
+
 </footer>
 </html> 
