@@ -43,3 +43,13 @@
 	margin-top: 5%;
 	margin-left: 2%;
 }
+
+.laughing {
+	font-size: 0;
+}
+
+.laugh:hover:after{
+	content: ' :D';    
+}
+
+
