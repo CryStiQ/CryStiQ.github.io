@@ -35,8 +35,11 @@
 	background-color: #1b2b65;
 }
 
-.badge-twitch {
-	background-color: #472673;
+.badge-twitch-live {
+	background-color: #FF3333;
+}
+.badge-twitch-offline {
+	background-color: #2b0a56;
 }
 
 .divs {
